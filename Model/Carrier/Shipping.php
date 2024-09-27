@@ -170,7 +170,7 @@ class Shipping extends AbstractCarrier implements CarrierInterface
         $options = [];
         if (!empty($data)) {
             foreach($data as $delivery) {
-                $deliveryDate = Data::parse8601($delivery->announceBefore);
+                $deliveryDate = Data::parse8601($delivery->deliveryWindowOpen);
                 $deliveryTimeOpen = Data::parse8601($delivery->deliveryWindowOpen);
                 $deliveryTimeClose = Data::parse8601($delivery->deliveryWindowClose);
                 $options[] = [
